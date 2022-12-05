@@ -1,0 +1,385 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>1.10 本章习题 - hhhh</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="01.00.html"><strong aria-hidden="true">1.</strong> 1.0 本章导读</a></li><li class="chapter-item expanded "><a href="01.01.html"><strong aria-hidden="true">2.</strong> 1.1 旋转字符串</a></li><li class="chapter-item expanded "><a href="01.02.html"><strong aria-hidden="true">3.</strong> 1.2 字符串包含</a></li><li class="chapter-item expanded "><a href="01.03.html"><strong aria-hidden="true">4.</strong> 1.3 字符串转换成整数</a></li><li class="chapter-item expanded "><a href="01.04.html"><strong aria-hidden="true">5.</strong> 1.4 回文判断</a></li><li class="chapter-item expanded "><a href="01.05.html"><strong aria-hidden="true">6.</strong> 1.5 最长回文子串</a></li><li class="chapter-item expanded "><a href="01.06.html"><strong aria-hidden="true">7.</strong> 1.6 字符串的全排列</a></li><li class="chapter-item expanded "><a href="01.10.html" class="active"><strong aria-hidden="true">8.</strong> 1.10 本章习题</a></li><li class="chapter-item expanded "><a href="02.00.html"><strong aria-hidden="true">9.</strong> 2.0 本章导读</a></li><li class="chapter-item expanded "><a href="02.01.html"><strong aria-hidden="true">10.</strong> 2.1 寻找最小的 k 个数</a></li><li class="chapter-item expanded "><a href="02.02.html"><strong aria-hidden="true">11.</strong> 2.2 寻找和为定值的两个数</a></li><li class="chapter-item expanded "><a href="02.03.html"><strong aria-hidden="true">12.</strong> 2.3 寻找和为定值的多个数</a></li><li class="chapter-item expanded "><a href="02.04.html"><strong aria-hidden="true">13.</strong> 2.4 最大连续子数组和</a></li><li class="chapter-item expanded "><a href="02.05.html"><strong aria-hidden="true">14.</strong> 2.5 跳台阶</a></li><li class="chapter-item expanded "><a href="02.06.html"><strong aria-hidden="true">15.</strong> 2.6 奇偶排序</a></li><li class="chapter-item expanded "><a href="02.07.html"><strong aria-hidden="true">16.</strong> 2.7 荷兰国旗</a></li><li class="chapter-item expanded "><a href="02.08.html"><strong aria-hidden="true">17.</strong> 2.8 矩阵相乘</a></li><li class="chapter-item expanded "><a href="02.09.html"><strong aria-hidden="true">18.</strong> 2.9 完美洗牌</a></li><li class="chapter-item expanded "><a href="02.15.html"><strong aria-hidden="true">19.</strong> 2.15 本章习题</a></li><li class="chapter-item expanded "><a href="03.00.html"><strong aria-hidden="true">20.</strong> 3.0 本章导读</a></li><li class="chapter-item expanded "><a href="03.01.html"><strong aria-hidden="true">21.</strong> 3.1 红黑树</a></li><li class="chapter-item expanded "><a href="03.02.html"><strong aria-hidden="true">22.</strong> 3.2 B树</a></li><li class="chapter-item expanded "><a href="03.03.html"><strong aria-hidden="true">23.</strong> 3.3 最近公共祖先LCA</a></li><li class="chapter-item expanded "><a href="03.10.html"><strong aria-hidden="true">24.</strong> 3.10 本章习题</a></li><li class="chapter-item expanded "><a href="04.01.html"><strong aria-hidden="true">25.</strong> 4.1 有序数组的查找</a></li><li class="chapter-item expanded "><a href="04.02.html"><strong aria-hidden="true">26.</strong> 4.2 行列递增矩阵的查找</a></li><li class="chapter-item expanded "><a href="04.03.html"><strong aria-hidden="true">27.</strong> 4.3 出现次数超过一半的数字</a></li><li class="chapter-item expanded "><a href="05.00.html"><strong aria-hidden="true">28.</strong> 5.0 本章导读</a></li><li class="chapter-item expanded "><a href="05.01.html"><strong aria-hidden="true">29.</strong> 5.1 最大连续乘积子串</a></li><li class="chapter-item expanded "><a href="05.02.html"><strong aria-hidden="true">30.</strong> 5.2 字符串编辑距离</a></li><li class="chapter-item expanded "><a href="05.03.html"><strong aria-hidden="true">31.</strong> 5.3 格子取数</a></li><li class="chapter-item expanded "><a href="05.04.html"><strong aria-hidden="true">32.</strong> 5.4 交替字符串</a></li><li class="chapter-item expanded "><a href="05.10.html"><strong aria-hidden="true">33.</strong> 5.10 本章习题</a></li><li class="chapter-item expanded "><a href="06.00.html"><strong aria-hidden="true">34.</strong> 6.0 本章导读</a></li><li class="chapter-item expanded "><a href="06.01.html"><strong aria-hidden="true">35.</strong> 6.1 关联式容器</a></li><li class="chapter-item expanded "><a href="06.02.html"><strong aria-hidden="true">36.</strong> 6.2 分而治之</a></li><li class="chapter-item expanded "><a href="06.03.html"><strong aria-hidden="true">37.</strong> 6.3 simhash算法</a></li><li class="chapter-item expanded "><a href="06.04.html"><strong aria-hidden="true">38.</strong> 6.4 外排序</a></li><li class="chapter-item expanded "><a href="06.05.html"><strong aria-hidden="true">39.</strong> 6.5 MapReduce</a></li><li class="chapter-item expanded "><a href="06.06.html"><strong aria-hidden="true">40.</strong> 6.6 多层划分</a></li><li class="chapter-item expanded "><a href="06.07.html"><strong aria-hidden="true">41.</strong> 6.7 Bitmap</a></li><li class="chapter-item expanded "><a href="06.08.html"><strong aria-hidden="true">42.</strong> 6.8 Bloom filter</a></li><li class="chapter-item expanded "><a href="06.09.html"><strong aria-hidden="true">43.</strong> 6.9 Trie树</a></li><li class="chapter-item expanded "><a href="06.10.html"><strong aria-hidden="true">44.</strong> 6.10 数据库</a></li><li class="chapter-item expanded "><a href="06.11.html"><strong aria-hidden="true">45.</strong> 6.11 倒排索引</a></li><li class="chapter-item expanded "><a href="06.15.html"><strong aria-hidden="true">46.</strong> 6.15 本章习题</a></li><li class="chapter-item expanded "><a href="07.01.html"><strong aria-hidden="true">47.</strong> 7.1 K 近邻算法</a></li><li class="chapter-item expanded "><a href="07.02.svm.html"><strong aria-hidden="true">48.</strong> 7.2 支持向量机</a></li><li class="chapter-item expanded "><a href="08.00.html"><strong aria-hidden="true">49.</strong> 附录A 语言基础</a></li><li class="chapter-item expanded "><a href="08.01.html"><strong aria-hidden="true">50.</strong> 附录B 概率统计</a></li><li class="chapter-item expanded "><a href="08.02.html"><strong aria-hidden="true">51.</strong> 附录C 智力逻辑</a></li><li class="chapter-item expanded "><a href="08.03.html"><strong aria-hidden="true">52.</strong> 附录D 系统设计</a></li><li class="chapter-item expanded "><a href="08.04.html"><strong aria-hidden="true">53.</strong> 附录E 操作系统</a></li><li class="chapter-item expanded "><a href="08.05.html"><strong aria-hidden="true">54.</strong> 附录F 网络协议</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">hhhh</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="本章字符串和链表的习题"><a class="header" href="#本章字符串和链表的习题">本章字符串和链表的习题</a></h2>
+<p><strong>1、第一个只出现一次的字符</strong></p>
+<p>在一个字符串中找到第一个只出现一次的字符。如输入abaccdeff，则输出b。</p>
+<p><strong>2、对称子字符串的最大长度</strong></p>
+<p>输入一个字符串，输出该字符串中对称的子字符串的最大长度。比如输入字符串“google”，由于该字符串里最长的对称子字符串是“goog”，因此输出4。</p>
+<p>提示：可能很多人都写过判断一个字符串是不是对称的函数，这个题目可以看成是该函数的加强版。</p>
+<p><strong>3、编程判断俩个链表是否相交</strong></p>
+<p>给出俩个单向链表的头指针，比如h1，h2，判断这俩个链表是否相交。为了简化问题，我们假设俩个链表均不带环。</p>
+<p>问题扩展：</p>
+<ul>
+<li>如果链表可能有环列?</li>
+<li>如果需要求出俩个链表相交的第一个节点列?</li>
+</ul>
+<p><strong>4、逆序输出链表</strong></p>
+<p>输入一个链表的头结点，从尾到头反过来输出每个结点的值。</p>
+<p><strong>5、在O(1)时间内删除单链表结点</strong></p>
+<p>给定单链表的一个结点的指针，同时该结点不是尾结点，此外没有指向其它任何结点的指针，请在O(1)时间内删除该结点。</p>
+<p><strong>6、找出链表的第一个公共结点</strong></p>
+<p>两个单向链表，找出它们的第一个公共结点。</p>
+<p><strong>7、在字符串中删除特定的字符</strong></p>
+<p>输入两个字符串，从第一字符串中删除第二个字符串中所有的字符。</p>
+<p>例如，输入”They are students.”和”aeiou”，则删除之后的第一个字符串变成”Thy r stdnts.”。</p>
+<p><strong>8、字符串的匹配</strong></p>
+<p>在一篇英文文章中查找指定的人名，人名使用二十六个英文字母（可以是大写或小写）、空格以及两个通配符组成（<em>、?），通配符“</em>”表示零个或多个任意字母，通配符“?”表示一个任意字母。如：“J* Smi??” 可以匹配“John Smith” .</p>
+<p><strong>9、字符个数的统计</strong></p>
+<p>char *str = &quot;AbcABca&quot;;
+写出一个函数，查找出每个字符的个数，区分大小写，要求时间复杂度是n（提示用ASCII码）</p>
+<p><strong>10、最小子串</strong></p>
+<p>给一篇文章，里面是由一个个单词组成，单词中间空格隔开，再给一个字符串指针数组，比如 char *str[]={&quot;hello&quot;,&quot;world&quot;,&quot;good&quot;};</p>
+<p>求文章中包含这个字符串指针数组的最小子串。注意，只要包含即可，没有顺序要求。</p>
+<p>提示：文章也可以理解为一个大的字符串数组，单词之前只有空格，没有标点符号。</p>
+<p><strong>11、字符串的集合</strong></p>
+<p>给定一个字符串的集合，格式如：{aaa bbb ccc}， {bbb ddd}，{eee fff}，{ggg}，{ddd hhh}要求将其中交集不为空的集合合并，要求合并完成后的集合之间无交集，例如上例应输出{aaa bbb ccc ddd hhh}，{eee fff}， {ggg}。</p>
+<p>提示：并查集。</p>
+<p><strong>12、五笔编码</strong></p>
+<p>五笔的编码范围是a ~ y的25个字母，从1位到4位的编码，如果我们把五笔的编码按字典序排序，形成一个数组如下：
+a, aa, aaa, aaaa, aaab, aaac, … …, b, ba, baa, baaa, baab, baac … …, yyyw, yyyx, yyyy
+其中a的Index为0，aa的Index为1，aaa的Index为2，以此类推。</p>
+<ul>
+<li>编写一个函数，输入是任意一个编码，比如baca，输出这个编码对应的Index；</li>
+<li>编写一个函数，输入是任意一个Index，比如12345，输出这个Index对应的编码。</li>
+</ul>
+<p><strong>13、最长重复子串</strong></p>
+<p>一个长度为10000的字符串，写一个算法，找出最长的重复子串，如abczzacbca,结果是bc。</p>
+<p>提示：此题是后缀树/数组的典型应用，即是求后缀数组的height[]的最大值。</p>
+<p><strong>14、字符串的压缩</strong></p>
+<p>一个字符串，压缩其中的连续空格为1个后，对其中的每个字串逆序打印出来。比如&quot;abc   efg  hij&quot;打印为&quot;cba gfe jih&quot;。</p>
+<p><strong>15、最大重复出现子串</strong></p>
+<p>输入一个字符串，如何求最大重复出现的字符串呢？比如输入ttabcftrgabcd,输出结果为abc, canffcancd,输出结果为can。</p>
+<p>给定一个字符串，求出其最长的重复子串。</p>
+<p>分析：使用后缀数组，对一个字符串生成相应的后缀数组后，然后再排序，排完序依次检测相邻的两个字符串的开头公共部分。
+这样的时间复杂度为：</p>
+<ul>
+<li>生成后缀数组 O(N)</li>
+<li>排序 O(NlogN*N) 最后面的 N 是因为字符串比较也是 O(N)</li>
+<li>依次检测相邻的两个字符串 O(N * N)</li>
+</ul>
+<p>故最终总的时间复杂度是 O(N^2*logN)</p>
+<p><strong>16、字符串的删除</strong></p>
+<p>删除模式串中出现的字符，如“welcome to asted”,模式串为“aeiou”那么得到的字符串为“wlcm t std&quot;，要求性能最优。</p>
+<p><strong>17、字符串的移动</strong></p>
+<p>字符串为*号和26个字母的任意组合，把 *号都移动到最左侧，把字母移到最右侧并保持相对顺序不变，要求时间和空间复杂度最小。</p>
+<p><strong>18、字符串的包含</strong></p>
+<p>输入：</p>
+<p>L:“hello”“july”</p>
+<p>S:“hellomehellojuly”</p>
+<p>输出：S中包含的L一个单词，要求这个单词只出现一次，如果有多个出现一次的，输出第一个这样的单词。</p>
+<p><strong>19、倒数第n个元素</strong></p>
+<p>链表倒数第n个元素。</p>
+<p>提示：设置一前一后两个指针，一个指针步长为1，另一个指针步长为n，当一个指针走到链表尾端时，另一指针指向的元素即为链表倒数第n个元素。</p>
+<p><strong>20、回文字符串</strong></p>
+<p>将一个很长的字符串，分割成一段一段的子字符串，子字符串都是回文字符串。有回文字符串就输出最长的，没有回文就输出一个一个的字符。</p>
+<p>例如：</p>
+<p>habbafgh</p>
+<p>输出h,abba,f,g,h。</p>
+<p>提示：一般的人会想到用后缀数组来解决这个问题。</p>
+<p><strong>21、最长连续字符</strong></p>
+<p>用递归算法写一个函数，求字符串最长连续字符的长度，比如aaaabbcc的长度为4，aabb的长度为2，ab的长度为1。</p>
+<p><strong>22、字符串反转</strong></p>
+<p>实现字符串反转函数。</p>
+<p><strong>22、字符串压缩</strong></p>
+<p>通过键盘输入一串小写字母(a~z)组成的字符串。请编写一个字符串压缩程序，将字符串中连续出席的重复字母进行压缩，并输出压缩后的字符串。
+压缩规则：</p>
+<ul>
+<li>仅压缩连续重复出现的字符。比如字符串&quot;abcbc&quot;由于无连续重复字符，压缩后的字符串还是&quot;abcbc&quot;。</li>
+<li>压缩字段的格式为&quot;字符重复的次数+字符&quot;。例如：字符串&quot;xxxyyyyyyz&quot;压缩后就成为&quot;3x6yz&quot;。</li>
+</ul>
+<p>要求实现函数： 
+void stringZip(const char *pInputStr, long lInputLen, char *pOutputStr);</p>
+<ul>
+<li>输入pInputStr：  输入字符串lInputLen：  输入字符串长度</li>
+<li>输出 pOutputStr： 输出字符串，空间已经开辟好，与输入字符串等长；</li>
+</ul>
+<p>注意：只需要完成该函数功能算法，中间不需要有任何IO的输入输出</p>
+<p>示例 </p>
+<ul>
+<li>输入：“cccddecc”   输出：“3c2de2c”</li>
+<li>输入：“adef”     输出：“adef”</li>
+<li>输入：“pppppppp” 输出：“8p”</li>
+</ul>
+<p><strong>23、集合的差集</strong></p>
+<p>已知集合A和B的元素分别用不含头结点的单链表存储，请求集合A与B的差集，并将结果保存在集合A的单链表中。例如，若集合A={5,10,20,15,25,30}，集合B={5,15,35,25}，完成计算后A={10,20,30}。</p>
+<p><strong>24、最长公共子串</strong></p>
+<p>给定字符串A和B，输出A和B中的第一个最长公共子串，比如A=“wepiabc B=“pabcni”，则输出“abc”。</p>
+<p><strong>25、均分01</strong></p>
+<p>给定一个字符串，长度不超过100，其中只包含字符0和1,并且字符0和1出现得次数都是偶数。你可以把字符串任意切分，把切分后得字符串任意分给两个人，让两个人得到的0的总个数相等，得到的1的总个数也相等。</p>
+<p>例如，输入串是010111,我们可以把串切位01, 011,和1，把第1段和第3段放在一起分给一个人，第二段分给另外一个人，这样每个人都得到了1个0和两个1。我们要做的是让切分的次数尽可能少。</p>
+<p>考虑到最差情况，则是把字符串切分(n - 1)次形成n个长度为1的串。</p>
+<p><strong>26、合法字符串</strong></p>
+<p>用n个不同的字符（编号1 - n），组成一个字符串，有如下2点要求：</p>
+<ul>
+<li>1、对于编号为i 的字符，如果2 * i &gt; n，则该字符可以作为最后一个字符，但如果该字符不是作为最后一个字符的话，则该字符后面可以接任意字符；</li>
+<li>2、对于编号为i的字符，如果2 * i &lt;= n，则该字符不可以作为最后一个字符，且该字符后面所紧接着的下一个字符的编号一定要 &gt;= 2 * i。</li>
+</ul>
+<p>问有多少长度为M且符合条件的字符串。</p>
+<p>例如：N = 2，M = 3。则abb, bab, bbb是符合条件的字符串，剩下的均为不符合条件的字符串。</p>
+<p>假定n和m皆满足：2&lt;=n,m&lt;=1000000000)。</p>
+<p><strong>27、最短摘要生成</strong></p>
+<p>你我在百度或谷歌搜索框中敲入本博客名称的前4个字“结构之法”，便能在第一个选项看到本博客的链接，如下图2所示：</p>
+<p><img src="../images/21~22/22.1.gif" alt="" /></p>
+<p>在上面所示的图2中，搜索结果“结构之法算法之道-博客频道-CSDN.NET”下有一段说明性的文字：“程序员面试、算法研究、编程艺术、红黑树4大经典原创系列集锦与总结 作者：July--结构之法算法...”，我们把这段文字称为那个搜索结果的摘要，亦即最短摘要。我们的问题是，请问，这个最短摘要是怎么生成的呢?</p>
+<p><strong>28、实现memcpy函数</strong></p>
+<p>已知memcpy的函数为： <code>void* memcpy(void* dest , const void* src , size_t count)</code>其中dest是目的指针，src是源指针。不调用c++/c的memcpy库函数，请编写memcpy。</p>
+<p>分析：参考代码如下：</p>
+<pre><code class="language-cpp">void* memcpy(void *dst, const void *src, size_t count)      
+{      
+    //安全检查  
+    assert( (dst != NULL) &amp;&amp; (src != NULL) );      
+  
+    unsigned char *pdst = (unsigned char *)dst;      
+    const unsigned char *psrc = (const unsigned char *)src;      
+  
+    //防止内存重复  
+    assert(!(psrc&lt;=pdst &amp;&amp; pdst&lt;psrc+count));      
+    assert(!(pdst&lt;=psrc &amp;&amp; psrc&lt;pdst+count));      
+  
+    while(count--)      
+    {      
+        *pdst = *psrc;      
+        pdst++;      
+        psrc++;      
+    }      
+    return dst;      
+}    
+</code></pre>
+<p><strong>29、实现memmove函数</strong></p>
+<p>分析：memmove函数是&lt;string.h&gt;的标准函数，其作用是把从source开始的num个字符拷贝到destination。最简单的方法是直接复制，但是由于它们可能存在内存的重叠区，因此可能覆盖了原有数据。</p>
+<p>比如当source+count&gt;=dest&amp;&amp;source&lt;dest时，dest可能覆盖了原有source的数据。解决办法是从后往前拷贝，对于其它情况，则从前往后拷贝。</p>
+<p>参考代码如下：</p>
+<pre><code class="language-cpp">//void * memmove ( void * destination, const void * source, size_t num );)  
+ void* memmove(void* dest, void* source, size_t count)  
+   {  
+  
+      void* ret = dest;  
+  
+      if (dest &lt;= source || dest &gt;= (source + count))  
+       {  
+          //正向拷贝  
+         //copy from lower addresses to higher addresses  
+         while (count --)  
+             *dest++ = *source++;  
+     }  
+     else  
+     {  
+         //反向拷贝  
+         //copy from higher addresses to lower addresses  
+         dest += count - 1;  
+         source += count - 1;  
+  
+         while (count--)  
+             *dest-- = *source--;  
+     }  
+     return ret;  
+ }  
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="01.06.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="02.00.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="01.06.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="02.00.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

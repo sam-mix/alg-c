@@ -1,0 +1,355 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>3.10 本章习题 - hhhh</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="01.00.html"><strong aria-hidden="true">1.</strong> 1.0 本章导读</a></li><li class="chapter-item expanded "><a href="01.01.html"><strong aria-hidden="true">2.</strong> 1.1 旋转字符串</a></li><li class="chapter-item expanded "><a href="01.02.html"><strong aria-hidden="true">3.</strong> 1.2 字符串包含</a></li><li class="chapter-item expanded "><a href="01.03.html"><strong aria-hidden="true">4.</strong> 1.3 字符串转换成整数</a></li><li class="chapter-item expanded "><a href="01.04.html"><strong aria-hidden="true">5.</strong> 1.4 回文判断</a></li><li class="chapter-item expanded "><a href="01.05.html"><strong aria-hidden="true">6.</strong> 1.5 最长回文子串</a></li><li class="chapter-item expanded "><a href="01.06.html"><strong aria-hidden="true">7.</strong> 1.6 字符串的全排列</a></li><li class="chapter-item expanded "><a href="01.10.html"><strong aria-hidden="true">8.</strong> 1.10 本章习题</a></li><li class="chapter-item expanded "><a href="02.00.html"><strong aria-hidden="true">9.</strong> 2.0 本章导读</a></li><li class="chapter-item expanded "><a href="02.01.html"><strong aria-hidden="true">10.</strong> 2.1 寻找最小的 k 个数</a></li><li class="chapter-item expanded "><a href="02.02.html"><strong aria-hidden="true">11.</strong> 2.2 寻找和为定值的两个数</a></li><li class="chapter-item expanded "><a href="02.03.html"><strong aria-hidden="true">12.</strong> 2.3 寻找和为定值的多个数</a></li><li class="chapter-item expanded "><a href="02.04.html"><strong aria-hidden="true">13.</strong> 2.4 最大连续子数组和</a></li><li class="chapter-item expanded "><a href="02.05.html"><strong aria-hidden="true">14.</strong> 2.5 跳台阶</a></li><li class="chapter-item expanded "><a href="02.06.html"><strong aria-hidden="true">15.</strong> 2.6 奇偶排序</a></li><li class="chapter-item expanded "><a href="02.07.html"><strong aria-hidden="true">16.</strong> 2.7 荷兰国旗</a></li><li class="chapter-item expanded "><a href="02.08.html"><strong aria-hidden="true">17.</strong> 2.8 矩阵相乘</a></li><li class="chapter-item expanded "><a href="02.09.html"><strong aria-hidden="true">18.</strong> 2.9 完美洗牌</a></li><li class="chapter-item expanded "><a href="02.15.html"><strong aria-hidden="true">19.</strong> 2.15 本章习题</a></li><li class="chapter-item expanded "><a href="03.00.html"><strong aria-hidden="true">20.</strong> 3.0 本章导读</a></li><li class="chapter-item expanded "><a href="03.01.html"><strong aria-hidden="true">21.</strong> 3.1 红黑树</a></li><li class="chapter-item expanded "><a href="03.02.html"><strong aria-hidden="true">22.</strong> 3.2 B树</a></li><li class="chapter-item expanded "><a href="03.03.html"><strong aria-hidden="true">23.</strong> 3.3 最近公共祖先LCA</a></li><li class="chapter-item expanded "><a href="03.10.html" class="active"><strong aria-hidden="true">24.</strong> 3.10 本章习题</a></li><li class="chapter-item expanded "><a href="04.01.html"><strong aria-hidden="true">25.</strong> 4.1 有序数组的查找</a></li><li class="chapter-item expanded "><a href="04.02.html"><strong aria-hidden="true">26.</strong> 4.2 行列递增矩阵的查找</a></li><li class="chapter-item expanded "><a href="04.03.html"><strong aria-hidden="true">27.</strong> 4.3 出现次数超过一半的数字</a></li><li class="chapter-item expanded "><a href="05.00.html"><strong aria-hidden="true">28.</strong> 5.0 本章导读</a></li><li class="chapter-item expanded "><a href="05.01.html"><strong aria-hidden="true">29.</strong> 5.1 最大连续乘积子串</a></li><li class="chapter-item expanded "><a href="05.02.html"><strong aria-hidden="true">30.</strong> 5.2 字符串编辑距离</a></li><li class="chapter-item expanded "><a href="05.03.html"><strong aria-hidden="true">31.</strong> 5.3 格子取数</a></li><li class="chapter-item expanded "><a href="05.04.html"><strong aria-hidden="true">32.</strong> 5.4 交替字符串</a></li><li class="chapter-item expanded "><a href="05.10.html"><strong aria-hidden="true">33.</strong> 5.10 本章习题</a></li><li class="chapter-item expanded "><a href="06.00.html"><strong aria-hidden="true">34.</strong> 6.0 本章导读</a></li><li class="chapter-item expanded "><a href="06.01.html"><strong aria-hidden="true">35.</strong> 6.1 关联式容器</a></li><li class="chapter-item expanded "><a href="06.02.html"><strong aria-hidden="true">36.</strong> 6.2 分而治之</a></li><li class="chapter-item expanded "><a href="06.03.html"><strong aria-hidden="true">37.</strong> 6.3 simhash算法</a></li><li class="chapter-item expanded "><a href="06.04.html"><strong aria-hidden="true">38.</strong> 6.4 外排序</a></li><li class="chapter-item expanded "><a href="06.05.html"><strong aria-hidden="true">39.</strong> 6.5 MapReduce</a></li><li class="chapter-item expanded "><a href="06.06.html"><strong aria-hidden="true">40.</strong> 6.6 多层划分</a></li><li class="chapter-item expanded "><a href="06.07.html"><strong aria-hidden="true">41.</strong> 6.7 Bitmap</a></li><li class="chapter-item expanded "><a href="06.08.html"><strong aria-hidden="true">42.</strong> 6.8 Bloom filter</a></li><li class="chapter-item expanded "><a href="06.09.html"><strong aria-hidden="true">43.</strong> 6.9 Trie树</a></li><li class="chapter-item expanded "><a href="06.10.html"><strong aria-hidden="true">44.</strong> 6.10 数据库</a></li><li class="chapter-item expanded "><a href="06.11.html"><strong aria-hidden="true">45.</strong> 6.11 倒排索引</a></li><li class="chapter-item expanded "><a href="06.15.html"><strong aria-hidden="true">46.</strong> 6.15 本章习题</a></li><li class="chapter-item expanded "><a href="07.01.html"><strong aria-hidden="true">47.</strong> 7.1 K 近邻算法</a></li><li class="chapter-item expanded "><a href="07.02.svm.html"><strong aria-hidden="true">48.</strong> 7.2 支持向量机</a></li><li class="chapter-item expanded "><a href="08.00.html"><strong aria-hidden="true">49.</strong> 附录A 语言基础</a></li><li class="chapter-item expanded "><a href="08.01.html"><strong aria-hidden="true">50.</strong> 附录B 概率统计</a></li><li class="chapter-item expanded "><a href="08.02.html"><strong aria-hidden="true">51.</strong> 附录C 智力逻辑</a></li><li class="chapter-item expanded "><a href="08.03.html"><strong aria-hidden="true">52.</strong> 附录D 系统设计</a></li><li class="chapter-item expanded "><a href="08.04.html"><strong aria-hidden="true">53.</strong> 附录E 操作系统</a></li><li class="chapter-item expanded "><a href="08.05.html"><strong aria-hidden="true">54.</strong> 附录F 网络协议</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">hhhh</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="本章堆栈树图相关的习题"><a class="header" href="#本章堆栈树图相关的习题">本章堆栈树图相关的习题</a></h2>
+<p><strong>1、附近地点搜索</strong></p>
+<p>找一个点集中与给定点距离最近的点，同时，给定的二维点集都是固定的，查询可能有很多次，例如，坐标(39.91, 116.37)附近500米内有什么餐馆，那么让你来设计，该怎么做？</p>
+<p><img src="../images/36~37/37.1.jpg" alt="" /></p>
+<p>提示：可以建立R树进行二维搜索，或使用GeoHash算法解决。</p>
+<p><strong>2、最小操作数</strong></p>
+<p>给定一个单词集合Dict，其中每个单词的长度都相同。现从此单词集合Dict中抽取两个单词A、B，我们希望通过若干次操作把单词A变成单词B，每次操作可以改变单词的一个字母，同时，新产生的单词必须是在给定的单词集合Dict中。求所有行得通步数最少的修改方法。</p>
+<p>举个例子如下：</p>
+<p>Given:
+A = &quot;hit&quot;
+B = &quot;cog&quot;
+Dict = [&quot;hot&quot;,&quot;dot&quot;,&quot;dog&quot;,&quot;lot&quot;,&quot;log&quot;]
+Return
+[
+[&quot;hit&quot;,&quot;hot&quot;,&quot;dot&quot;,&quot;dog&quot;,&quot;cog&quot;],
+[&quot;hit&quot;,&quot;hot&quot;,&quot;lot&quot;,&quot;log&quot;,&quot;cog&quot;]
+]</p>
+<p>即把字符串A = &quot;hit&quot;转变成字符串B = &quot;cog&quot;，有以下两种可能：</p>
+<p>&quot;hit&quot; -&gt; &quot;hot&quot; -&gt;  &quot;dot&quot; -&gt;  &quot;dog&quot; -&gt; &quot;cog&quot;；</p>
+<p>&quot;hit&quot; -&gt;  &quot;hot&quot; -&gt;  &quot;lot&quot; -&gt;  &quot;log&quot;  -&gt;&quot;cog&quot;。</p>
+<p>提示：建图然后搜索。</p>
+<p><strong>3、最少操作次数的简易版</strong></p>
+<p>给定两个字符串，仅由小写字母组成，它们包含了相同字符。
+求把第一个字符串变成第二个字符串的最小操作次数，且每次操作只能对第一个字符串中的某个字符移动到此字符串中的开头。
+例如给定两个字符串“abcd&quot; &quot;bcad&quot; ，输出：2，因为需要操作2次才能把&quot;abcd&quot;变成“bcad&quot; ，方法是：abcd-&gt;cabd-&gt;bcad。</p>
+<p><strong>3、把二元查找树转变成排序的双向链表</strong></p>
+<p>输入一棵二元查找树，将该二元查找树转换成一个排序的双向链表。要求不能创建任何新的结点，只调整指针的指向。例如把下述二叉查找树</p>
+<p>10</p>
+<p>/ /</p>
+<p>6  14</p>
+<p>/ / / /</p>
+<p>4  8 12 </p>
+<p>转换成双向链表，即得：</p>
+<p>4=6=8=10=12=14=16。</p>
+<p><strong>4、在二元树中找出和为某一值的所有路径</strong></p>
+<p>输入一个整数和一棵二元树。
+从树的根结点开始往下访问一直到叶结点所经过的所有结点形成一条路径。
+打印出和与输入整数相等的所有路径。</p>
+<p><strong>5、判断整数序列是不是二元查找树的后序遍历结果</strong></p>
+<p>输入一个整数数组，判断该数组是不是某二元查找树的后序遍历的结果，如果是返回true，否则返回false。</p>
+<p>例如输入5、7、6、9、11、10、8，由于这一整数序列是如下树的后序遍历结果：</p>
+<pre><code>     8
+  /  /
+ 6    10
+/ /  / /
+</code></pre>
+<p>5  7 9  11
+因此返回true。</p>
+<p>如果输入7、4、6、5，没有哪棵树的后序遍历的结果是这个序列，因此返回false。</p>
+<p><strong>6、设计包含min函数的栈</strong></p>
+<p>定义栈的数据结构，要求添加一个min函数，能够得到栈的最小元素。要求函数min、push以及pop的时间复杂度都是O(1)。</p>
+<p><strong>7、求二叉树中节点的最大距离</strong></p>
+<p>如果我们把二叉树看成一个图，父子节点之间的连线看成是双向的，我们姑且定义&quot;距离&quot;为两节点之间边的个数。</p>
+<p>请写一个程序，求一棵二叉树中相距最远的两个节点之间的距离。</p>
+<p><strong>8</strong></p>
+<p>输入一颗二元树，从上往下按层打印树的每个结点，同一层中按照从左往右的顺序打印。 </p>
+<p>例如输入</p>
+<p>8</p>
+<p>/ /</p>
+<p>6 10</p>
+<p>/ / / /</p>
+<p>5 7 9 11</p>
+<p>输出8 6 10 5 7 9 11。</p>
+<p><strong>9</strong></p>
+<p>请用递归和非递归俩种方法实现二叉树的前序遍历。</p>
+<p><strong>10、求树的深度</strong></p>
+<p>输入一棵二元树的根结点，求该树的深度。从根结点到叶结点依次经过的结点（含根、叶结点）形成树的一条路径，最长路径的长度为树的深度。</p>
+<p>例如：输入二元树：
+10</p>
+<pre><code>                                      /     /
+                                      
+                                    6        14
+                                    
+                                  /         /   /
+                                  
+                                4         12     16
+</code></pre>
+<p>输出该树的深度3。</p>
+<p>实现简单的一个查找二叉树的深度的函数。</p>
+<p><strong>11、用俩个栈实现队列</strong></p>
+<p>某队列的声明如下：</p>
+<pre><code class="language-cpp">template&lt;typename T&gt; class CQueue
+{
+public:
+      CQueue() {}
+      ~CQueue() {}
+      void appendTail(const T&amp; node);  // append a element to tail
+      void deleteHead();               // remove a element from head
+private:
+     T&gt; m_stack1;
+     T&gt; m_stack2;
+};
+</code></pre>
+<p>提示：这道题实质上是要求我们用两个栈来实现一个队列。栈是一种后入先出的数据容器，因此对队列进行的插入和删除操作都是在栈顶上进行；队列是一种先入先出的数据容器，我们总是把新元素插入到队列的尾部，而从队列的头部删除元素。</p>
+<p><strong>12</strong></p>
+<p>假设有一颗二叉树，已知这棵树的节点上不均匀的分布了若干石头，石头数跟这棵二叉树的节点数相同，石头只可以在子节点和父节点之间进行搬运，每次只能搬运一颗石头。请问如何以最少的步骤将石头搬运均匀，使得每个节点上的石头上刚好为1。</p>
+<p><strong>13</strong></p>
+<p>对于一颗完全二叉树，要求给所有节点加上一个pNext指针，指向同一层的相邻节点；如果当前节点已经是该层的最后一个节点，则将pNext指针指向NULL；给出程序实现，并分析时间复杂度和空间复杂度。</p>
+<p><strong>14</strong></p>
+<p>两个用户之间可能互相认识，也可能是单向的认识，用什么数据结构来表示？如果一个用户不认识别人，而且别人也不认识他，那么他就是无效节点，如何找出这些无效节点？自定义数据接口并实现之，要求尽可能节约内存和空间复杂度。</p>
+<p><strong>15</strong></p>
+<p>有一个一亿节点的树，现在已知两个点，找这两个点的共同的祖先。</p>
+<p><strong>16</strong></p>
+<p>给一个二叉树，每个节点都是正或负整数，如何找到一个子树，它所有节点的和最大？ </p>
+<p>提示：后序遍历，每一个节点保存左右子树的和加上自己的值。额外一个空间存放最大值。</p>
+<p>写完后序遍历，面试官可能接着与你讨论，</p>
+<ul>
+<li>a). 如果要求找出只含正数的最大子树，程序该如何修改来实现？</li>
+<li>b). 假设我们将子树定义为它和它的部分后代，那该如何解决？</li>
+<li>c). 对于b，加上正数的限制，方案又该如何？</li>
+</ul>
+<p>总之，一道看似简单的面试题，可能能变换成各种花样。</p>
+<p>比如，面试管可能还会再提两个要求：第一，不能用全局变量；第二，有个参数控制是否要只含正数的子树。</p>
+<p><strong>17</strong></p>
+<p>有一个排序二叉树，数据类型是int型，如何找出中间大的元素。</p>
+<p><strong>18</strong></p>
+<p>中序遍历二叉树，结果为ABCDEFGH，后序遍历结果为ABEDCHGF，那么前序遍历结果为?</p>
+<p><strong>19</strong></p>
+<p>写程序输出8皇后问题的所有排列，要求使用非递归的深度优先遍历。</p>
+<p><strong>20</strong></p>
+<p>在8X8的棋盘上分布着n个骑士，他们想约在某一个格中聚会。骑士每天可以像国际象棋中的马那样移动一次，可以从中间像8个方向移动（当然不能走出棋盘），请计算n个骑士的最早聚会地点和要走多少天。要求尽早聚会，且n个人走的总步数最少，先到聚会地点的骑士可以不再移动等待其他的骑士。</p>
+<p>从键盘输入n（0&lt;n&lt;=64），然后一次输入n个骑士的初始位置xi,yi（0&lt;=xi,yi&lt;=7）。屏幕输出以空格分隔的三个数，分别为聚会点（x，y）以及走的天数。</p>
+<p>提示：BFS。</p>
+<p><strong>21、城市遍历</strong></p>
+<p>某人家住北京，想去青海玩，可能会经过许多城市，现已知地图上的城市连接，求经过M个城市到达青海的路线种类。城市可以多次到达的，比如去了天津又回到北京，再去天津，即为3次。北京出发不算1次。</p>
+<p>输入：</p>
+<p>N  M  S
+N为城市总数，北京为0，青海为N-1；
+M为经过的城市数目；
+S为之后有S行
+i  j
+表示第i个城市可以去第j个城市，是有方向的。</p>
+<p>输出：
+N
+表示路径种类。</p>
+<p><strong>22</strong></p>
+<p>给定两个站点，如果没有直达的路线，如何找到换乘次数最少的路线？</p>
+<p><strong>23</strong></p>
+<p>有两座桥，其中一座可能是坏的，两个守桥人分别守在这两座桥的入口。他们一个总是会说实话，一个总是说谎话。
+你现在需要找出哪一座桥可以通过。</p>
+<p>请问最少需要问守桥人几个问题，可以找出可以通过的桥？如何问？</p>
+<p><strong>24</strong></p>
+<p>一类似于蜂窝的结构的图，进行搜索最短路径（要求5分钟）。</p>
+<p><strong>25</strong></p>
+<p>对于一颗完全二叉树，要求给所有节点加上一个pNext指针，指向同一层的相邻节点；如果当前节点已经是该层的最后一个节点，则将pNext指针指向NULL；给出程序实现，并分析时间复杂度和空间复杂度。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="03.03.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="04.01.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="03.03.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="04.01.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

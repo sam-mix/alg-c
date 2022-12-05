@@ -1,0 +1,326 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>2.6 奇偶排序 - hhhh</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="01.00.html"><strong aria-hidden="true">1.</strong> 1.0 本章导读</a></li><li class="chapter-item expanded "><a href="01.01.html"><strong aria-hidden="true">2.</strong> 1.1 旋转字符串</a></li><li class="chapter-item expanded "><a href="01.02.html"><strong aria-hidden="true">3.</strong> 1.2 字符串包含</a></li><li class="chapter-item expanded "><a href="01.03.html"><strong aria-hidden="true">4.</strong> 1.3 字符串转换成整数</a></li><li class="chapter-item expanded "><a href="01.04.html"><strong aria-hidden="true">5.</strong> 1.4 回文判断</a></li><li class="chapter-item expanded "><a href="01.05.html"><strong aria-hidden="true">6.</strong> 1.5 最长回文子串</a></li><li class="chapter-item expanded "><a href="01.06.html"><strong aria-hidden="true">7.</strong> 1.6 字符串的全排列</a></li><li class="chapter-item expanded "><a href="01.10.html"><strong aria-hidden="true">8.</strong> 1.10 本章习题</a></li><li class="chapter-item expanded "><a href="02.00.html"><strong aria-hidden="true">9.</strong> 2.0 本章导读</a></li><li class="chapter-item expanded "><a href="02.01.html"><strong aria-hidden="true">10.</strong> 2.1 寻找最小的 k 个数</a></li><li class="chapter-item expanded "><a href="02.02.html"><strong aria-hidden="true">11.</strong> 2.2 寻找和为定值的两个数</a></li><li class="chapter-item expanded "><a href="02.03.html"><strong aria-hidden="true">12.</strong> 2.3 寻找和为定值的多个数</a></li><li class="chapter-item expanded "><a href="02.04.html"><strong aria-hidden="true">13.</strong> 2.4 最大连续子数组和</a></li><li class="chapter-item expanded "><a href="02.05.html"><strong aria-hidden="true">14.</strong> 2.5 跳台阶</a></li><li class="chapter-item expanded "><a href="02.06.html" class="active"><strong aria-hidden="true">15.</strong> 2.6 奇偶排序</a></li><li class="chapter-item expanded "><a href="02.07.html"><strong aria-hidden="true">16.</strong> 2.7 荷兰国旗</a></li><li class="chapter-item expanded "><a href="02.08.html"><strong aria-hidden="true">17.</strong> 2.8 矩阵相乘</a></li><li class="chapter-item expanded "><a href="02.09.html"><strong aria-hidden="true">18.</strong> 2.9 完美洗牌</a></li><li class="chapter-item expanded "><a href="02.15.html"><strong aria-hidden="true">19.</strong> 2.15 本章习题</a></li><li class="chapter-item expanded "><a href="03.00.html"><strong aria-hidden="true">20.</strong> 3.0 本章导读</a></li><li class="chapter-item expanded "><a href="03.01.html"><strong aria-hidden="true">21.</strong> 3.1 红黑树</a></li><li class="chapter-item expanded "><a href="03.02.html"><strong aria-hidden="true">22.</strong> 3.2 B树</a></li><li class="chapter-item expanded "><a href="03.03.html"><strong aria-hidden="true">23.</strong> 3.3 最近公共祖先LCA</a></li><li class="chapter-item expanded "><a href="03.10.html"><strong aria-hidden="true">24.</strong> 3.10 本章习题</a></li><li class="chapter-item expanded "><a href="04.01.html"><strong aria-hidden="true">25.</strong> 4.1 有序数组的查找</a></li><li class="chapter-item expanded "><a href="04.02.html"><strong aria-hidden="true">26.</strong> 4.2 行列递增矩阵的查找</a></li><li class="chapter-item expanded "><a href="04.03.html"><strong aria-hidden="true">27.</strong> 4.3 出现次数超过一半的数字</a></li><li class="chapter-item expanded "><a href="05.00.html"><strong aria-hidden="true">28.</strong> 5.0 本章导读</a></li><li class="chapter-item expanded "><a href="05.01.html"><strong aria-hidden="true">29.</strong> 5.1 最大连续乘积子串</a></li><li class="chapter-item expanded "><a href="05.02.html"><strong aria-hidden="true">30.</strong> 5.2 字符串编辑距离</a></li><li class="chapter-item expanded "><a href="05.03.html"><strong aria-hidden="true">31.</strong> 5.3 格子取数</a></li><li class="chapter-item expanded "><a href="05.04.html"><strong aria-hidden="true">32.</strong> 5.4 交替字符串</a></li><li class="chapter-item expanded "><a href="05.10.html"><strong aria-hidden="true">33.</strong> 5.10 本章习题</a></li><li class="chapter-item expanded "><a href="06.00.html"><strong aria-hidden="true">34.</strong> 6.0 本章导读</a></li><li class="chapter-item expanded "><a href="06.01.html"><strong aria-hidden="true">35.</strong> 6.1 关联式容器</a></li><li class="chapter-item expanded "><a href="06.02.html"><strong aria-hidden="true">36.</strong> 6.2 分而治之</a></li><li class="chapter-item expanded "><a href="06.03.html"><strong aria-hidden="true">37.</strong> 6.3 simhash算法</a></li><li class="chapter-item expanded "><a href="06.04.html"><strong aria-hidden="true">38.</strong> 6.4 外排序</a></li><li class="chapter-item expanded "><a href="06.05.html"><strong aria-hidden="true">39.</strong> 6.5 MapReduce</a></li><li class="chapter-item expanded "><a href="06.06.html"><strong aria-hidden="true">40.</strong> 6.6 多层划分</a></li><li class="chapter-item expanded "><a href="06.07.html"><strong aria-hidden="true">41.</strong> 6.7 Bitmap</a></li><li class="chapter-item expanded "><a href="06.08.html"><strong aria-hidden="true">42.</strong> 6.8 Bloom filter</a></li><li class="chapter-item expanded "><a href="06.09.html"><strong aria-hidden="true">43.</strong> 6.9 Trie树</a></li><li class="chapter-item expanded "><a href="06.10.html"><strong aria-hidden="true">44.</strong> 6.10 数据库</a></li><li class="chapter-item expanded "><a href="06.11.html"><strong aria-hidden="true">45.</strong> 6.11 倒排索引</a></li><li class="chapter-item expanded "><a href="06.15.html"><strong aria-hidden="true">46.</strong> 6.15 本章习题</a></li><li class="chapter-item expanded "><a href="07.01.html"><strong aria-hidden="true">47.</strong> 7.1 K 近邻算法</a></li><li class="chapter-item expanded "><a href="07.02.svm.html"><strong aria-hidden="true">48.</strong> 7.2 支持向量机</a></li><li class="chapter-item expanded "><a href="08.00.html"><strong aria-hidden="true">49.</strong> 附录A 语言基础</a></li><li class="chapter-item expanded "><a href="08.01.html"><strong aria-hidden="true">50.</strong> 附录B 概率统计</a></li><li class="chapter-item expanded "><a href="08.02.html"><strong aria-hidden="true">51.</strong> 附录C 智力逻辑</a></li><li class="chapter-item expanded "><a href="08.03.html"><strong aria-hidden="true">52.</strong> 附录D 系统设计</a></li><li class="chapter-item expanded "><a href="08.04.html"><strong aria-hidden="true">53.</strong> 附录E 操作系统</a></li><li class="chapter-item expanded "><a href="08.05.html"><strong aria-hidden="true">54.</strong> 附录F 网络协议</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">hhhh</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p>#奇偶调序</p>
+<h2 id="题目描述"><a class="header" href="#题目描述">题目描述</a></h2>
+<p>输入一个整数数组，调整数组中数字的顺序，使得所有奇数位于数组的前半部分，所有偶数位于数组的后半部分。要求时间复杂度为O(n)。</p>
+<h3 id="分析与解法"><a class="header" href="#分析与解法">分析与解法</a></h3>
+<p>最容易想到的办法是从头扫描这个数组，每碰到一个偶数，拿出这个数字，并把位于这个数字后面的所有数字往前挪动一位。挪完之后在数组的末尾有一个空位，然后把该偶数放入这个空位。由于每碰到一个偶数，需要移动O(n)个数字，所以这种方法总的时间复杂度是O(n^2)，不符合题目要求。</p>
+<p>事实上，若把奇数看做是小的数，偶数看做是大的数，那么按照题目所要求的奇数放在前面偶数放在后面，就相当于小数放在前面大数放在后面，联想到快速排序中的partition过程，不就是通过一个主元把整个数组分成大小两个部分么，小于主元的小数放在前面，大于主元的大数放在后面。</p>
+<p>而partition过程有以下两种实现：</p>
+<ul>
+<li>一头一尾两个指针往中间扫描，如果头指针遇到的数比主元大且尾指针遇到的数比主元小，则交换头尾指针所分别指向的数字；</li>
+<li>一前一后两个指针同时从左往右扫，如果前指针遇到的数比主元小，则后指针右移一位，然后交换各自所指向的数字。</li>
+</ul>
+<p>类似这个partition过程，奇偶排序问题也可以分别借鉴partition的两种实现解决。 </p>
+<p>为何？比如partition的实现一中，如果最终是为了让整个序列元素从小到大排序，那么头指针理应指向的就是小数，而尾指针理应指向的就是大数，故当头指针指的是大数且尾指针指的是小数的时候就不正常，此时就当交换。</p>
+<h4 id="解法一"><a class="header" href="#解法一">解法一</a></h4>
+<p>借鉴partition的实现一，我们可以考虑维护两个指针，一个指针指向数组的第一个数字，我们称之为头指针，向右移动；一个指针指向最后一个数字，称之为尾指针，向左移动。</p>
+<p>这样，两个指针分别从数组的头部和尾部向数组的中间移动，如果第一个指针指向的数字是偶数而第二个指针指向的数字是奇数，我们就交换这两个数字。</p>
+<p>因为按照题目要求，最终是为了让奇数排在数组的前面，偶数排在数组的后面，所以头指针理应指向的就是奇数，尾指针理应指向的就是偶数，故当头指针指向的是偶数且尾指针指向的是奇数时，我们就当立即交换它们所指向的数字。</p>
+<p>思路有了，接下来，写代码实现：</p>
+<pre><code class="language-cpp">//判断是否为奇数
+bool IsOddNumber(int data)
+{
+	return data &amp; 1 == 1;
+}
+
+//奇偶互换
+void OddEvenSort(int *pData, unsigned int length)
+{
+	if (pData == NULL || length == 0)
+		return;
+
+	int *pBegin = pData;
+	int *pEnd = pData + length - 1;
+
+	while (pBegin &lt; pEnd)
+	{
+		//如果pBegin指针指向的是奇数，正常，向右移
+		if (IsOddNumber(*pBegin))  
+		{
+			pBegin++;
+		}
+		//如果pEnd指针指向的是偶数，正常，向左移
+		else if (!IsOddNumber(*pEnd))
+		{
+			pEnd--;
+		}
+		else
+		{
+			//否则都不正常，交换
+			//swap是STL库函数，声明为void swap(int&amp; a, int&amp; b);
+			swap(*pBegin, *pEnd);
+		}
+	}
+}
+</code></pre>
+<p>本方法通过头尾两个指针往中间扫描，一次遍历完成所有奇数偶数的重新排列，时间复杂度为O(n)。</p>
+<h4 id="解法二"><a class="header" href="#解法二">解法二</a></h4>
+<p>我们先来看看快速排序partition过程的第二种实现是具体怎样的一个原理。</p>
+<p>partition分治过程，每一趟排序的过程中，选取的主元都会把整个数组排列成一大一小的序列，继而递归排序完整个数组。如下伪代码所示：</p>
+<pre><code>PARTITION(A, p, r)
+1  x ← A[r]
+2  i ← p - 1
+3  for j ← p to r - 1
+4       do if A[j] ≤ x
+5             then i ← i + 1
+6                  exchange A[i] &lt;-&gt; A[j]
+7  exchange A[i + 1] &lt;-&gt; A[r]
+8  return i + 1
+</code></pre>
+<p>举个例子如下：现要对数组data = {2, 8,7, 1, 3, 5, 6, 4}进行快速排序，为了表述方便，令<code>i</code>指向数组头部前一个位置，<code>j</code>指向数组头部元素，<code>j</code>在前，<code>i</code>在后，双双从左向右移动。</p>
+<p>① j 指向元素2时，i 也指向元素2，2与2互换不变</p>
+<pre><code>i  p/j
+
+    2   8   7   1   3   5   6   4(主元)
+</code></pre>
+<p>② 于是j 继续后移，直到指向了1，1 &lt;= 4，于是i++，i 指向8，故j 所指元素1 与 i 所指元素8 位置互换：</p>
+<pre><code> 	i       j
+
+2   1   7   8   3   5   6   4
+</code></pre>
+<p>③ j 继续后移，指到了元素3,3 &lt;= 4，于是同样i++，i 指向7，故j 所指元素3 与 i 所指元素7 位置互换：</p>
+<pre><code>	    i       j
+
+2   1   3   8   7   5   6   4
+</code></pre>
+<p>④ j 一路后移，没有再碰到比主元4小的元素：</p>
+<pre><code>  	    i               j
+
+2   1   3   8   7   5   6   4
+</code></pre>
+<p>⑤ 最后，A[i + 1] &lt;-&gt; A[r]，即8与4交换，所以，数组最终变成了如下形式：</p>
+<pre><code>    2   1   3   4   7   5   6   8
+</code></pre>
+<p>这样，快速排序第一趟完成。就这样，4把整个数组分成了俩部分，2 1 3,7 5 6 8，再递归对这两部分分别进行排序。</p>
+<p>借鉴partition的上述实现，我们也可以维护两个指针i和j，一个指针指向数组的第一个数的前一个位置，我们称之为后指针i，向右移动；一个指针指向数组第一个数，称之为前指针j，也向右移动，且前指针j先向右移动。如果前指针j指向的数字是奇数，则令i指针向右移动一位，然后交换i和j指针所各自指向的数字。</p>
+<p>因为按照题目要求，最终是为了让奇数排在数组的前面，偶数排在数组的后面，所以i指针理应指向的就是奇数，j指针理应指向的就是偶数，所以，当j指针指向的是奇数时，不正常，我们就当让i++，然后交换i和j指针所各自指向的数字。</p>
+<p>参考代码如下：</p>
+<pre><code class="language-c">//奇偶互换
+void OddEvenSort2(int data[], int lo, int hi)
+{
+	int i = lo - 1;
+	for (int j = lo; j &lt; hi; j++)
+	{
+		//data[j]指向奇数，交换
+		if ( IsOddNumber(data[j]) )
+		{
+			i = i + 1;
+			swap(data[i], data[j]);
+		}
+	}
+	swap(data[i + 1], data[hi]);
+}
+</code></pre>
+<p>此解法一前一后两个指针同时向右扫描的过程中，也是一次遍历完成奇数偶数的重新排列，故时间复杂度也为O(n)。</p>
+<h3 id="举一反三"><a class="header" href="#举一反三">举一反三</a></h3>
+<p>一个未排序整数数组，有正负数，重新排列使负数排在正数前面，并且要求不改变原来的正负数之间相对顺序，比如： input: 1,7,-5,9,-12,15 ans: -5,-12,1,7,9,15 要求时间复杂度O(n),空间O(1)。</p>
+<p>分析：如果本题没有这个要求“并且要求不改变原来的正负数之间相对顺序”，那么同奇偶数排序是一道题，但加上这个不能改变正负数之间的相对顺序后，便使得问题变得比较艰难了，若有兴趣，读者可以参考这篇论文《STABLE MINIMUM SPACE PARTITIONING IN LINEAR TIME》。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="02.05.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="02.07.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="02.05.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="02.07.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

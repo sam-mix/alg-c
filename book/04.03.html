@@ -1,0 +1,287 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>4.3 出现次数超过一半的数字 - hhhh</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="01.00.html"><strong aria-hidden="true">1.</strong> 1.0 本章导读</a></li><li class="chapter-item expanded "><a href="01.01.html"><strong aria-hidden="true">2.</strong> 1.1 旋转字符串</a></li><li class="chapter-item expanded "><a href="01.02.html"><strong aria-hidden="true">3.</strong> 1.2 字符串包含</a></li><li class="chapter-item expanded "><a href="01.03.html"><strong aria-hidden="true">4.</strong> 1.3 字符串转换成整数</a></li><li class="chapter-item expanded "><a href="01.04.html"><strong aria-hidden="true">5.</strong> 1.4 回文判断</a></li><li class="chapter-item expanded "><a href="01.05.html"><strong aria-hidden="true">6.</strong> 1.5 最长回文子串</a></li><li class="chapter-item expanded "><a href="01.06.html"><strong aria-hidden="true">7.</strong> 1.6 字符串的全排列</a></li><li class="chapter-item expanded "><a href="01.10.html"><strong aria-hidden="true">8.</strong> 1.10 本章习题</a></li><li class="chapter-item expanded "><a href="02.00.html"><strong aria-hidden="true">9.</strong> 2.0 本章导读</a></li><li class="chapter-item expanded "><a href="02.01.html"><strong aria-hidden="true">10.</strong> 2.1 寻找最小的 k 个数</a></li><li class="chapter-item expanded "><a href="02.02.html"><strong aria-hidden="true">11.</strong> 2.2 寻找和为定值的两个数</a></li><li class="chapter-item expanded "><a href="02.03.html"><strong aria-hidden="true">12.</strong> 2.3 寻找和为定值的多个数</a></li><li class="chapter-item expanded "><a href="02.04.html"><strong aria-hidden="true">13.</strong> 2.4 最大连续子数组和</a></li><li class="chapter-item expanded "><a href="02.05.html"><strong aria-hidden="true">14.</strong> 2.5 跳台阶</a></li><li class="chapter-item expanded "><a href="02.06.html"><strong aria-hidden="true">15.</strong> 2.6 奇偶排序</a></li><li class="chapter-item expanded "><a href="02.07.html"><strong aria-hidden="true">16.</strong> 2.7 荷兰国旗</a></li><li class="chapter-item expanded "><a href="02.08.html"><strong aria-hidden="true">17.</strong> 2.8 矩阵相乘</a></li><li class="chapter-item expanded "><a href="02.09.html"><strong aria-hidden="true">18.</strong> 2.9 完美洗牌</a></li><li class="chapter-item expanded "><a href="02.15.html"><strong aria-hidden="true">19.</strong> 2.15 本章习题</a></li><li class="chapter-item expanded "><a href="03.00.html"><strong aria-hidden="true">20.</strong> 3.0 本章导读</a></li><li class="chapter-item expanded "><a href="03.01.html"><strong aria-hidden="true">21.</strong> 3.1 红黑树</a></li><li class="chapter-item expanded "><a href="03.02.html"><strong aria-hidden="true">22.</strong> 3.2 B树</a></li><li class="chapter-item expanded "><a href="03.03.html"><strong aria-hidden="true">23.</strong> 3.3 最近公共祖先LCA</a></li><li class="chapter-item expanded "><a href="03.10.html"><strong aria-hidden="true">24.</strong> 3.10 本章习题</a></li><li class="chapter-item expanded "><a href="04.01.html"><strong aria-hidden="true">25.</strong> 4.1 有序数组的查找</a></li><li class="chapter-item expanded "><a href="04.02.html"><strong aria-hidden="true">26.</strong> 4.2 行列递增矩阵的查找</a></li><li class="chapter-item expanded "><a href="04.03.html" class="active"><strong aria-hidden="true">27.</strong> 4.3 出现次数超过一半的数字</a></li><li class="chapter-item expanded "><a href="05.00.html"><strong aria-hidden="true">28.</strong> 5.0 本章导读</a></li><li class="chapter-item expanded "><a href="05.01.html"><strong aria-hidden="true">29.</strong> 5.1 最大连续乘积子串</a></li><li class="chapter-item expanded "><a href="05.02.html"><strong aria-hidden="true">30.</strong> 5.2 字符串编辑距离</a></li><li class="chapter-item expanded "><a href="05.03.html"><strong aria-hidden="true">31.</strong> 5.3 格子取数</a></li><li class="chapter-item expanded "><a href="05.04.html"><strong aria-hidden="true">32.</strong> 5.4 交替字符串</a></li><li class="chapter-item expanded "><a href="05.10.html"><strong aria-hidden="true">33.</strong> 5.10 本章习题</a></li><li class="chapter-item expanded "><a href="06.00.html"><strong aria-hidden="true">34.</strong> 6.0 本章导读</a></li><li class="chapter-item expanded "><a href="06.01.html"><strong aria-hidden="true">35.</strong> 6.1 关联式容器</a></li><li class="chapter-item expanded "><a href="06.02.html"><strong aria-hidden="true">36.</strong> 6.2 分而治之</a></li><li class="chapter-item expanded "><a href="06.03.html"><strong aria-hidden="true">37.</strong> 6.3 simhash算法</a></li><li class="chapter-item expanded "><a href="06.04.html"><strong aria-hidden="true">38.</strong> 6.4 外排序</a></li><li class="chapter-item expanded "><a href="06.05.html"><strong aria-hidden="true">39.</strong> 6.5 MapReduce</a></li><li class="chapter-item expanded "><a href="06.06.html"><strong aria-hidden="true">40.</strong> 6.6 多层划分</a></li><li class="chapter-item expanded "><a href="06.07.html"><strong aria-hidden="true">41.</strong> 6.7 Bitmap</a></li><li class="chapter-item expanded "><a href="06.08.html"><strong aria-hidden="true">42.</strong> 6.8 Bloom filter</a></li><li class="chapter-item expanded "><a href="06.09.html"><strong aria-hidden="true">43.</strong> 6.9 Trie树</a></li><li class="chapter-item expanded "><a href="06.10.html"><strong aria-hidden="true">44.</strong> 6.10 数据库</a></li><li class="chapter-item expanded "><a href="06.11.html"><strong aria-hidden="true">45.</strong> 6.11 倒排索引</a></li><li class="chapter-item expanded "><a href="06.15.html"><strong aria-hidden="true">46.</strong> 6.15 本章习题</a></li><li class="chapter-item expanded "><a href="07.01.html"><strong aria-hidden="true">47.</strong> 7.1 K 近邻算法</a></li><li class="chapter-item expanded "><a href="07.02.svm.html"><strong aria-hidden="true">48.</strong> 7.2 支持向量机</a></li><li class="chapter-item expanded "><a href="08.00.html"><strong aria-hidden="true">49.</strong> 附录A 语言基础</a></li><li class="chapter-item expanded "><a href="08.01.html"><strong aria-hidden="true">50.</strong> 附录B 概率统计</a></li><li class="chapter-item expanded "><a href="08.02.html"><strong aria-hidden="true">51.</strong> 附录C 智力逻辑</a></li><li class="chapter-item expanded "><a href="08.03.html"><strong aria-hidden="true">52.</strong> 附录D 系统设计</a></li><li class="chapter-item expanded "><a href="08.04.html"><strong aria-hidden="true">53.</strong> 附录E 操作系统</a></li><li class="chapter-item expanded "><a href="08.05.html"><strong aria-hidden="true">54.</strong> 附录F 网络协议</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">hhhh</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="出现次数超过一半的数字"><a class="header" href="#出现次数超过一半的数字">出现次数超过一半的数字</a></h1>
+<h2 id="题目描述"><a class="header" href="#题目描述">题目描述</a></h2>
+<p>题目：数组中有一个数字出现的次数超过了数组长度的一半，找出这个数字。</p>
+<h2 id="分析与解法"><a class="header" href="#分析与解法">分析与解法</a></h2>
+<p>一个数组中有很多数，现在我们要找出其中那个出现次数超过总数一半的数字，怎么找呢？大凡当我们碰到某一个杂乱无序的东西时，我们人的内心本质期望是希望把它梳理成有序的。所以，我们得分两种情况来讨论，无序和有序。</p>
+<h3 id="解法一"><a class="header" href="#解法一">解法一</a></h3>
+<p>如果<strong>无序</strong>，那么我们是不是可以先把数组中所有这些数字<strong>先进行排序</strong>（至于排序方法可选取最常用的快速排序）。排完序后，直接遍历，在遍历整个数组的同时统计每个数字的出现次数，然后把那个出现次数超过一半的数字直接输出，题目便解答完成了。总的时间复杂度为O(nlogn + n)。</p>
+<p>但<strong>如果是有序的数组呢</strong>，或者经过排序把无序的数组变成有序后的数组呢？是否在排完序O(nlogn)后，还需要再遍历一次整个数组？</p>
+<p>我们知道，既然是数组的话，那么我们可以根据数组索引支持直接定向到某一个数。我们发现，一个数字在数组中的出现次数超过了一半，那么在已排好序的数组索引的N/2处（从零开始编号），就一定是这个数字。自此，我们只需要对整个数组排完序之后，然后直接输出数组中的第N/2处的数字即可，这个数字即是整个数组中出现次数超过一半的数字，总的时间复杂度由于少了最后一次整个数组的遍历，缩小到O(n*logn)。</p>
+<p>然时间复杂度并无本质性的改变，我们需要找到一种更为有效的思路或方法。</p>
+<h3 id="解法二"><a class="header" href="#解法二">解法二</a></h3>
+<p>既要缩小总的时间复杂度，那么可以用查找时间复杂度为O(1)的<strong>hash表</strong>，即以空间换时间。哈希表的键值（Key）为数组中的数字，值（Value）为该数字对应的次数。然后直接遍历整个<strong>hash表</strong>，找出每一个数字在对应的位置处出现的次数，输出那个出现次数超过一半的数字即可。</p>
+<h3 id="解法三"><a class="header" href="#解法三">解法三</a></h3>
+<p>Hash表需要O(n)的空间开销，且要设计hash函数，还有没有更好的办法呢？我们可以试着这么考虑，如果<strong>每次删除两个不同的数</strong>（不管是不是我们要查找的那个出现次数超过一半的数字），那么，在剩下的数中，我们要查找的数（出现次数超过一半）出现的次数仍然超过总数的一半。通过不断重复这个过程，不断排除掉其它的数，最终找到那个出现次数超过一半的数字。这个方法，免去了排序，也避免了空间O(n)的开销，总得说来，时间复杂度只有O(n)，空间复杂度为O(1)，貌似不失为最佳方法。</p>
+<p>举个简单的例子，如数组a[5] = {0, 1, 2, 1, 1};</p>
+<p>很显然，若我们要找出数组a中出现次数超过一半的数字，这个数字便是1，若根据上述思路4所述的方法来查找，我们应该怎么做呢？通过一次性遍历整个数组，然后每次删除不相同的两个数字，过程如下简单表示：</p>
+<pre><code>0 1 2 1 1 =&gt;2 1 1=&gt;1
+</code></pre>
+<p>最终1即为所找。</p>
+<p>此外，对于序列{5, 5, 5, 5, 1}，每次分别从数组两端尝试各删除一个数(左边删除5, 右边删除1，两个数不相同)，之后剩余{5, 5, 5}，这时无法找到两个不同的数进行删除，说明剩余元素全部相同，返回5作为结果即可。</p>
+<h3 id="解法四"><a class="header" href="#解法四">解法四</a></h3>
+<p>更进一步，考虑到这个问题本身的特殊性，我们可以在遍历数组的时候保存两个值：一个candidate，用来保存数组中遍历到的某个数字；一个nTimes，表示当前数字的出现次数，其中，nTimes初始化为1。当我们遍历到数组中下一个数字的时候：</p>
+<ul>
+<li>如果下一个数字与之前candidate保存的数字相同，则nTimes加1；</li>
+<li>如果下一个数字与之前candidate保存的数字不同，则nTimes减1；</li>
+<li>每当出现次数nTimes变为0后，用candidate保存下一个数字，并把nTimes重新设为1。
+直到遍历完数组中的所有数字为止。</li>
+</ul>
+<p>举个例子，假定数组为{0, 1, 2, 1, 1}，按照上述思路执行的步骤如下：</p>
+<ul>
+<li>1.开始时，candidate保存数字0，nTimes初始化为1；</li>
+<li>2.然后遍历到数字1，与数字0不同，则nTimes减1变为0；</li>
+<li>3.因为nTimes变为了0，故candidate保存下一个遍历到的数字2，且nTimes被重新设为1；</li>
+<li>4.继续遍历到第4个数字1，与之前candidate保存的数字2不同，故nTimes减1变为0；</li>
+<li>5.因nTimes再次被变为了0，故我们让candidate保存下一个遍历到的数字1，且nTimes被重新设为1。最后返回的就是最后一次把nTimes设为1的数字1。</li>
+</ul>
+<p>思路清楚了，完整的代码如下：</p>
+<pre><code class="language-c">//a代表数组，length代表数组长度
+int FindOneNumber(int* a, int length)
+{
+	int candidate = a[0];
+	int nTimes = 1;
+	for (int i = 1; i &lt; length; i++)
+	{
+		if (nTimes == 0)
+		{
+			candidate = a[i];
+			nTimes = 1;
+		}
+		else
+		{
+			if (candidate == a[i])
+				nTimes++;
+			else
+				nTimes--;
+		}
+	}
+	return candidate;
+}
+</code></pre>
+<p>即针对数组{0, 1, 2, 1, 1}，套用上述程序可得：</p>
+<pre><code>i=0，candidate=0，nTimes=1；
+i=1，a[1] != candidate，nTimes--，=0；
+i=2，candidate=2，nTimes=1；
+i=3，a[3] != candidate，nTimes--，=0；
+i=4，candidate=1，nTimes=1；
+如果是0，1，2，1，1，1的话，那么i=5，a[5] == candidate，nTimes++，=2；......
+</code></pre>
+<h2 id="举一反三"><a class="header" href="#举一反三">举一反三</a></h2>
+<p>加强版水王：找出出现次数刚好是一半的数字</p>
+<p>分析：我们知道，水王问题：有N个数，其中有一个数出现超过一半，要求在线性时间求出这个数。那么，我的问题是，加强版水王：有N个数，其中有一个数刚好出现一半次数，要求在线性时间内求出这个数。</p>
+<p>因为，很明显，如果是刚好出现一半的话，如此例： 0，1，2，1 ：</p>
+<pre><code>遍历到0时，candidate为0，times为1
+遍历到1时，与candidate不同，times减为0
+遍历到2时，times为0，则candidate更新为2，times加1
+遍历到1时，与candidate不同，则times减为0；我们需要返回所保存candidate（数字2）的下一个数字，即数字1。
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="04.02.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="05.00.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="04.02.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="05.00.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

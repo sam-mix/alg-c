@@ -1,0 +1,268 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>5.1 最大连续乘积子串 - hhhh</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="01.00.html"><strong aria-hidden="true">1.</strong> 1.0 本章导读</a></li><li class="chapter-item expanded "><a href="01.01.html"><strong aria-hidden="true">2.</strong> 1.1 旋转字符串</a></li><li class="chapter-item expanded "><a href="01.02.html"><strong aria-hidden="true">3.</strong> 1.2 字符串包含</a></li><li class="chapter-item expanded "><a href="01.03.html"><strong aria-hidden="true">4.</strong> 1.3 字符串转换成整数</a></li><li class="chapter-item expanded "><a href="01.04.html"><strong aria-hidden="true">5.</strong> 1.4 回文判断</a></li><li class="chapter-item expanded "><a href="01.05.html"><strong aria-hidden="true">6.</strong> 1.5 最长回文子串</a></li><li class="chapter-item expanded "><a href="01.06.html"><strong aria-hidden="true">7.</strong> 1.6 字符串的全排列</a></li><li class="chapter-item expanded "><a href="01.10.html"><strong aria-hidden="true">8.</strong> 1.10 本章习题</a></li><li class="chapter-item expanded "><a href="02.00.html"><strong aria-hidden="true">9.</strong> 2.0 本章导读</a></li><li class="chapter-item expanded "><a href="02.01.html"><strong aria-hidden="true">10.</strong> 2.1 寻找最小的 k 个数</a></li><li class="chapter-item expanded "><a href="02.02.html"><strong aria-hidden="true">11.</strong> 2.2 寻找和为定值的两个数</a></li><li class="chapter-item expanded "><a href="02.03.html"><strong aria-hidden="true">12.</strong> 2.3 寻找和为定值的多个数</a></li><li class="chapter-item expanded "><a href="02.04.html"><strong aria-hidden="true">13.</strong> 2.4 最大连续子数组和</a></li><li class="chapter-item expanded "><a href="02.05.html"><strong aria-hidden="true">14.</strong> 2.5 跳台阶</a></li><li class="chapter-item expanded "><a href="02.06.html"><strong aria-hidden="true">15.</strong> 2.6 奇偶排序</a></li><li class="chapter-item expanded "><a href="02.07.html"><strong aria-hidden="true">16.</strong> 2.7 荷兰国旗</a></li><li class="chapter-item expanded "><a href="02.08.html"><strong aria-hidden="true">17.</strong> 2.8 矩阵相乘</a></li><li class="chapter-item expanded "><a href="02.09.html"><strong aria-hidden="true">18.</strong> 2.9 完美洗牌</a></li><li class="chapter-item expanded "><a href="02.15.html"><strong aria-hidden="true">19.</strong> 2.15 本章习题</a></li><li class="chapter-item expanded "><a href="03.00.html"><strong aria-hidden="true">20.</strong> 3.0 本章导读</a></li><li class="chapter-item expanded "><a href="03.01.html"><strong aria-hidden="true">21.</strong> 3.1 红黑树</a></li><li class="chapter-item expanded "><a href="03.02.html"><strong aria-hidden="true">22.</strong> 3.2 B树</a></li><li class="chapter-item expanded "><a href="03.03.html"><strong aria-hidden="true">23.</strong> 3.3 最近公共祖先LCA</a></li><li class="chapter-item expanded "><a href="03.10.html"><strong aria-hidden="true">24.</strong> 3.10 本章习题</a></li><li class="chapter-item expanded "><a href="04.01.html"><strong aria-hidden="true">25.</strong> 4.1 有序数组的查找</a></li><li class="chapter-item expanded "><a href="04.02.html"><strong aria-hidden="true">26.</strong> 4.2 行列递增矩阵的查找</a></li><li class="chapter-item expanded "><a href="04.03.html"><strong aria-hidden="true">27.</strong> 4.3 出现次数超过一半的数字</a></li><li class="chapter-item expanded "><a href="05.00.html"><strong aria-hidden="true">28.</strong> 5.0 本章导读</a></li><li class="chapter-item expanded "><a href="05.01.html" class="active"><strong aria-hidden="true">29.</strong> 5.1 最大连续乘积子串</a></li><li class="chapter-item expanded "><a href="05.02.html"><strong aria-hidden="true">30.</strong> 5.2 字符串编辑距离</a></li><li class="chapter-item expanded "><a href="05.03.html"><strong aria-hidden="true">31.</strong> 5.3 格子取数</a></li><li class="chapter-item expanded "><a href="05.04.html"><strong aria-hidden="true">32.</strong> 5.4 交替字符串</a></li><li class="chapter-item expanded "><a href="05.10.html"><strong aria-hidden="true">33.</strong> 5.10 本章习题</a></li><li class="chapter-item expanded "><a href="06.00.html"><strong aria-hidden="true">34.</strong> 6.0 本章导读</a></li><li class="chapter-item expanded "><a href="06.01.html"><strong aria-hidden="true">35.</strong> 6.1 关联式容器</a></li><li class="chapter-item expanded "><a href="06.02.html"><strong aria-hidden="true">36.</strong> 6.2 分而治之</a></li><li class="chapter-item expanded "><a href="06.03.html"><strong aria-hidden="true">37.</strong> 6.3 simhash算法</a></li><li class="chapter-item expanded "><a href="06.04.html"><strong aria-hidden="true">38.</strong> 6.4 外排序</a></li><li class="chapter-item expanded "><a href="06.05.html"><strong aria-hidden="true">39.</strong> 6.5 MapReduce</a></li><li class="chapter-item expanded "><a href="06.06.html"><strong aria-hidden="true">40.</strong> 6.6 多层划分</a></li><li class="chapter-item expanded "><a href="06.07.html"><strong aria-hidden="true">41.</strong> 6.7 Bitmap</a></li><li class="chapter-item expanded "><a href="06.08.html"><strong aria-hidden="true">42.</strong> 6.8 Bloom filter</a></li><li class="chapter-item expanded "><a href="06.09.html"><strong aria-hidden="true">43.</strong> 6.9 Trie树</a></li><li class="chapter-item expanded "><a href="06.10.html"><strong aria-hidden="true">44.</strong> 6.10 数据库</a></li><li class="chapter-item expanded "><a href="06.11.html"><strong aria-hidden="true">45.</strong> 6.11 倒排索引</a></li><li class="chapter-item expanded "><a href="06.15.html"><strong aria-hidden="true">46.</strong> 6.15 本章习题</a></li><li class="chapter-item expanded "><a href="07.01.html"><strong aria-hidden="true">47.</strong> 7.1 K 近邻算法</a></li><li class="chapter-item expanded "><a href="07.02.svm.html"><strong aria-hidden="true">48.</strong> 7.2 支持向量机</a></li><li class="chapter-item expanded "><a href="08.00.html"><strong aria-hidden="true">49.</strong> 附录A 语言基础</a></li><li class="chapter-item expanded "><a href="08.01.html"><strong aria-hidden="true">50.</strong> 附录B 概率统计</a></li><li class="chapter-item expanded "><a href="08.02.html"><strong aria-hidden="true">51.</strong> 附录C 智力逻辑</a></li><li class="chapter-item expanded "><a href="08.03.html"><strong aria-hidden="true">52.</strong> 附录D 系统设计</a></li><li class="chapter-item expanded "><a href="08.04.html"><strong aria-hidden="true">53.</strong> 附录E 操作系统</a></li><li class="chapter-item expanded "><a href="08.05.html"><strong aria-hidden="true">54.</strong> 附录F 网络协议</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">hhhh</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="最大连续乘积子串"><a class="header" href="#最大连续乘积子串">最大连续乘积子串</a></h2>
+<h3 id="题目描述"><a class="header" href="#题目描述">题目描述</a></h3>
+<p>给一个浮点数序列，取最大乘积连续子串的值，例如 -2.5，4，0，3，0.5，8，-1，则取出的最大乘积连续子串为3，0.5，8。也就是说，上述数组中，3 0.5 8这3个数的乘积3<em>0.5</em>8=12是最大的，而且是连续的。</p>
+<h3 id="分析与解法"><a class="header" href="#分析与解法">分析与解法</a></h3>
+<p>此最大乘积连续子串与最大乘积子序列不同，请勿混淆，前者子串要求连续，后者子序列不要求连续。也就是说，最长公共子串（Longest CommonSubstring）和最长公共子序列（LongestCommon Subsequence，LCS）是：</p>
+<ul>
+<li>子串（Substring）是串的一个连续的部分，</li>
+<li>子序列（Subsequence）则是从不改变序列的顺序，而从序列中去掉任意的元素而获得的新序列；</li>
+</ul>
+<p>更简略地说，前者（子串）的字符的位置必须连续，后者（子序列LCS）则不必。比如字符串“ acdfg ”同“ akdfc ”的最长公共子串为“ df ”，而它们的最长公共子序列LCS是“ adf ”，LCS可以使用动态规划法解决。</p>
+<h4 id="解法一"><a class="header" href="#解法一">解法一</a></h4>
+<p>或许，读者初看此题，可能立马会想到用最简单粗暴的方式：两个for循环直接轮询。</p>
+<pre><code class="language-c">double maxProductSubstring(double *a, int length)
+{
+	double maxResult = a[0];
+	for (int i = 0; i &lt; length; i++)
+	{
+		double x = 1;
+		for (int j = i; j &lt; length; j++)
+		{
+			x *= a[j];
+			if (x &gt; maxResult)
+			{
+				maxResult = x;
+			}
+		}
+	}
+	return maxResult;
+}
+</code></pre>
+<p>但这种蛮力的方法的时间复杂度为O(n^2)，能否想办法降低时间复杂度呢？</p>
+<h4 id="解法二"><a class="header" href="#解法二">解法二</a></h4>
+<p>考虑到乘积子序列中有正有负也还可能有0，我们可以把问题简化成这样：数组中找一个子序列，使得它的乘积最大；同时找一个子序列，使得它的乘积最小（负数的情况）。因为虽然我们只要一个最大积，但由于负数的存在，我们同时找这两个乘积做起来反而方便。也就是说，不但记录最大乘积，也要记录最小乘积。</p>
+<p>假设数组为a[]，直接利用动态规划来求解，考虑到可能存在负数的情况，我们用maxend来表示以a[i]结尾的最大连续子串的乘积值，用minend表示以a[i]结尾的最小的子串的乘积值，那么状态转移方程为：</p>
+<pre><code>  maxend = max(max(maxend * a[i], minend * a[i]), a[i]);
+  minend = min(min(maxend * a[i], minend * a[i]), a[i]);  
+</code></pre>
+<p>初始状态为maxend = minend = a[0]。</p>
+<p>参考代码如下：</p>
+<pre><code class="language-cpp">double MaxProductSubstring(double *a, int length)
+{
+	double maxEnd = a[0];
+	double minEnd = a[0];
+	double maxResult = a[0];
+	for (int i = 1; i &lt; length; ++i)
+	{
+		double end1 = maxEnd * a[i], end2 = minEnd * a[i];
+		maxEnd = max(max(end1, end2), a[i]);
+		minEnd = min(min(end1, end2), a[i]);
+		maxResult = max(maxResult, maxEnd);
+	}
+	return maxResult;
+}
+</code></pre>
+<p>动态规划求解的方法一个for循环搞定，所以时间复杂度为O(n)。</p>
+<h3 id="举一反三"><a class="header" href="#举一反三">举一反三</a></h3>
+<p>1、给定一个长度为N的整数数组，只允许用乘法，不能用除法，计算任意（N-1）个数的组合中乘积最大的一组，并写出算法的时间复杂度。<br />
+分析：我们可以把所有可能的（N-1）个数的组合找出来，分别计算它们的乘积，并比较大小。由于总共有N个（N-1）个数的组合，总的时间复杂度为O（N2），显然这不是最好的解法。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="05.00.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="05.02.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="05.00.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="05.02.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

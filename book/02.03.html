@@ -1,0 +1,368 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>2.3 寻找和为定值的多个数 - hhhh</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="01.00.html"><strong aria-hidden="true">1.</strong> 1.0 本章导读</a></li><li class="chapter-item expanded "><a href="01.01.html"><strong aria-hidden="true">2.</strong> 1.1 旋转字符串</a></li><li class="chapter-item expanded "><a href="01.02.html"><strong aria-hidden="true">3.</strong> 1.2 字符串包含</a></li><li class="chapter-item expanded "><a href="01.03.html"><strong aria-hidden="true">4.</strong> 1.3 字符串转换成整数</a></li><li class="chapter-item expanded "><a href="01.04.html"><strong aria-hidden="true">5.</strong> 1.4 回文判断</a></li><li class="chapter-item expanded "><a href="01.05.html"><strong aria-hidden="true">6.</strong> 1.5 最长回文子串</a></li><li class="chapter-item expanded "><a href="01.06.html"><strong aria-hidden="true">7.</strong> 1.6 字符串的全排列</a></li><li class="chapter-item expanded "><a href="01.10.html"><strong aria-hidden="true">8.</strong> 1.10 本章习题</a></li><li class="chapter-item expanded "><a href="02.00.html"><strong aria-hidden="true">9.</strong> 2.0 本章导读</a></li><li class="chapter-item expanded "><a href="02.01.html"><strong aria-hidden="true">10.</strong> 2.1 寻找最小的 k 个数</a></li><li class="chapter-item expanded "><a href="02.02.html"><strong aria-hidden="true">11.</strong> 2.2 寻找和为定值的两个数</a></li><li class="chapter-item expanded "><a href="02.03.html" class="active"><strong aria-hidden="true">12.</strong> 2.3 寻找和为定值的多个数</a></li><li class="chapter-item expanded "><a href="02.04.html"><strong aria-hidden="true">13.</strong> 2.4 最大连续子数组和</a></li><li class="chapter-item expanded "><a href="02.05.html"><strong aria-hidden="true">14.</strong> 2.5 跳台阶</a></li><li class="chapter-item expanded "><a href="02.06.html"><strong aria-hidden="true">15.</strong> 2.6 奇偶排序</a></li><li class="chapter-item expanded "><a href="02.07.html"><strong aria-hidden="true">16.</strong> 2.7 荷兰国旗</a></li><li class="chapter-item expanded "><a href="02.08.html"><strong aria-hidden="true">17.</strong> 2.8 矩阵相乘</a></li><li class="chapter-item expanded "><a href="02.09.html"><strong aria-hidden="true">18.</strong> 2.9 完美洗牌</a></li><li class="chapter-item expanded "><a href="02.15.html"><strong aria-hidden="true">19.</strong> 2.15 本章习题</a></li><li class="chapter-item expanded "><a href="03.00.html"><strong aria-hidden="true">20.</strong> 3.0 本章导读</a></li><li class="chapter-item expanded "><a href="03.01.html"><strong aria-hidden="true">21.</strong> 3.1 红黑树</a></li><li class="chapter-item expanded "><a href="03.02.html"><strong aria-hidden="true">22.</strong> 3.2 B树</a></li><li class="chapter-item expanded "><a href="03.03.html"><strong aria-hidden="true">23.</strong> 3.3 最近公共祖先LCA</a></li><li class="chapter-item expanded "><a href="03.10.html"><strong aria-hidden="true">24.</strong> 3.10 本章习题</a></li><li class="chapter-item expanded "><a href="04.01.html"><strong aria-hidden="true">25.</strong> 4.1 有序数组的查找</a></li><li class="chapter-item expanded "><a href="04.02.html"><strong aria-hidden="true">26.</strong> 4.2 行列递增矩阵的查找</a></li><li class="chapter-item expanded "><a href="04.03.html"><strong aria-hidden="true">27.</strong> 4.3 出现次数超过一半的数字</a></li><li class="chapter-item expanded "><a href="05.00.html"><strong aria-hidden="true">28.</strong> 5.0 本章导读</a></li><li class="chapter-item expanded "><a href="05.01.html"><strong aria-hidden="true">29.</strong> 5.1 最大连续乘积子串</a></li><li class="chapter-item expanded "><a href="05.02.html"><strong aria-hidden="true">30.</strong> 5.2 字符串编辑距离</a></li><li class="chapter-item expanded "><a href="05.03.html"><strong aria-hidden="true">31.</strong> 5.3 格子取数</a></li><li class="chapter-item expanded "><a href="05.04.html"><strong aria-hidden="true">32.</strong> 5.4 交替字符串</a></li><li class="chapter-item expanded "><a href="05.10.html"><strong aria-hidden="true">33.</strong> 5.10 本章习题</a></li><li class="chapter-item expanded "><a href="06.00.html"><strong aria-hidden="true">34.</strong> 6.0 本章导读</a></li><li class="chapter-item expanded "><a href="06.01.html"><strong aria-hidden="true">35.</strong> 6.1 关联式容器</a></li><li class="chapter-item expanded "><a href="06.02.html"><strong aria-hidden="true">36.</strong> 6.2 分而治之</a></li><li class="chapter-item expanded "><a href="06.03.html"><strong aria-hidden="true">37.</strong> 6.3 simhash算法</a></li><li class="chapter-item expanded "><a href="06.04.html"><strong aria-hidden="true">38.</strong> 6.4 外排序</a></li><li class="chapter-item expanded "><a href="06.05.html"><strong aria-hidden="true">39.</strong> 6.5 MapReduce</a></li><li class="chapter-item expanded "><a href="06.06.html"><strong aria-hidden="true">40.</strong> 6.6 多层划分</a></li><li class="chapter-item expanded "><a href="06.07.html"><strong aria-hidden="true">41.</strong> 6.7 Bitmap</a></li><li class="chapter-item expanded "><a href="06.08.html"><strong aria-hidden="true">42.</strong> 6.8 Bloom filter</a></li><li class="chapter-item expanded "><a href="06.09.html"><strong aria-hidden="true">43.</strong> 6.9 Trie树</a></li><li class="chapter-item expanded "><a href="06.10.html"><strong aria-hidden="true">44.</strong> 6.10 数据库</a></li><li class="chapter-item expanded "><a href="06.11.html"><strong aria-hidden="true">45.</strong> 6.11 倒排索引</a></li><li class="chapter-item expanded "><a href="06.15.html"><strong aria-hidden="true">46.</strong> 6.15 本章习题</a></li><li class="chapter-item expanded "><a href="07.01.html"><strong aria-hidden="true">47.</strong> 7.1 K 近邻算法</a></li><li class="chapter-item expanded "><a href="07.02.svm.html"><strong aria-hidden="true">48.</strong> 7.2 支持向量机</a></li><li class="chapter-item expanded "><a href="08.00.html"><strong aria-hidden="true">49.</strong> 附录A 语言基础</a></li><li class="chapter-item expanded "><a href="08.01.html"><strong aria-hidden="true">50.</strong> 附录B 概率统计</a></li><li class="chapter-item expanded "><a href="08.02.html"><strong aria-hidden="true">51.</strong> 附录C 智力逻辑</a></li><li class="chapter-item expanded "><a href="08.03.html"><strong aria-hidden="true">52.</strong> 附录D 系统设计</a></li><li class="chapter-item expanded "><a href="08.04.html"><strong aria-hidden="true">53.</strong> 附录E 操作系统</a></li><li class="chapter-item expanded "><a href="08.05.html"><strong aria-hidden="true">54.</strong> 附录F 网络协议</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">hhhh</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="寻找和为定值的多个数"><a class="header" href="#寻找和为定值的多个数">寻找和为定值的多个数</a></h1>
+<h2 id="题目描述"><a class="header" href="#题目描述">题目描述</a></h2>
+<p>输入两个整数n和sum，从数列1，2，3.......n 中随意取几个数，使其和等于sum，要求将其中所有的可能组合列出来。</p>
+<h2 id="分析与解法"><a class="header" href="#分析与解法">分析与解法</a></h2>
+<h3 id="解法一"><a class="header" href="#解法一">解法一</a></h3>
+<p>注意到取n，和不取n个区别即可，考虑是否取第n个数的策略，可以转化为一个只和前n-1个数相关的问题。</p>
+<ul>
+<li>如果取第n个数，那么问题就转化为“取前n-1个数使得它们的和为sum-n”，对应的代码语句就是sumOfkNumber(sum - n, n - 1)；</li>
+<li>如果不取第n个数，那么问题就转化为“取前n-1个数使得他们的和为sum”，对应的代码语句为sumOfkNumber(sum, n - 1)。</li>
+</ul>
+<p>参考代码如下：</p>
+<pre><code class="language-c">list&lt;int&gt;list1;
+void SumOfkNumber(int sum, int n)
+{
+	// 递归出口
+	if (n &lt;= 0 || sum &lt;= 0)
+		return;
+
+	// 输出找到的结果
+	if (sum == n)
+	{
+		// 反转list
+		list1.reverse();
+		for (list&lt;int&gt;::iterator iter = list1.begin(); iter != list1.end(); iter++)
+			cout &lt;&lt; *iter &lt;&lt; &quot; + &quot;;
+		cout &lt;&lt; n &lt;&lt; endl;
+		list1.reverse()//此处还需反转回来
+	}
+
+	list1.push_front(n);      //典型的01背包问题
+	SumOfkNumber(sum - n, n - 1);   //“放”n，前n-1个数“填满”sum-n
+	list1.pop_front();
+	SumOfkNumber(sum, n - 1);     //不“放”n，n-1个数“填满”sum
+}
+</code></pre>
+<h3 id="解法二"><a class="header" href="#解法二">解法二</a></h3>
+<p>这个问题属于子集和问题（也是背包问题）。本程序采用回溯法+剪枝，其中X数组是解向量，t=∑(1,..,k-1)Wi*Xi, r=∑(k,..,n)Wi，且</p>
+<ul>
+<li>若t+Wk+W(k+1)&lt;=M,则Xk=true，递归左儿子(X1,X2,..,X(k-1),1)；否则剪枝；</li>
+<li>若t+r-Wk&gt;=M &amp;&amp; t+W(k+1)&lt;=M,则置Xk=0，递归右儿子(X1,X2,..,X(k-1),0)；否则剪枝；</li>
+</ul>
+<p>本题中W数组就是(1,2,..,n),所以直接用k代替WK值。</p>
+<p>代码编写如下：</p>
+<pre><code class="language-c">//输入t， r， 尝试Wk
+void SumOfkNumber(int t, int k, int r, int&amp; M, bool&amp; flag, bool* X)
+{
+	X[k] = true;   // 选第k个数
+	if (t + k == M) // 若找到一个和为M，则设置解向量的标志位，输出解
+	{
+		flag = true;
+		for (int i = 1; i &lt;= k; ++i)
+		{
+			if (X[i] == 1)
+			{
+				printf(&quot;%d &quot;, i);
+			}
+		}
+		printf(&quot;\n&quot;);
+	}
+	else
+	{   // 若第k+1个数满足条件，则递归左子树
+		if (t + k + (k + 1) &lt;= M)
+		{
+			SumOfkNumber(t + k, k + 1, r - k, M, flag, X);
+		}
+		// 若不选第k个数，选第k+1个数满足条件，则递归右子树
+		if ((t + r - k &gt;= M) &amp;&amp; (t + (k + 1) &lt;= M))
+		{
+			X[k] = false;
+			SumOfkNumber(t, k + 1, r - k, M, flag, X);
+		}
+	}
+}
+
+void search(int&amp; N, int&amp; M)
+{
+	// 初始化解空间
+	bool* X = (bool*)malloc(sizeof(bool)* (N + 1));
+	memset(X, false, sizeof(bool)* (N + 1));
+	int sum = (N + 1) * N * 0.5f;
+	if (1 &gt; M || sum &lt; M) // 预先排除无解情况
+	{
+		printf(&quot;not found\n&quot;);
+		return;
+	}
+	bool f = false;
+	SumOfkNumber(0, 1, sum, M, f, X);
+	if (!f)
+	{
+		printf(&quot;not found\n&quot;);
+	}
+	free(X);
+}
+</code></pre>
+<h2 id="0-1背包问题"><a class="header" href="#0-1背包问题">0-1背包问题</a></h2>
+<p>0-1背包问题是最基础的背包问题，其具体描述为：有N件物品和一个容量为V的背包。放入第i件物品耗费的费用是Ci，得到的价值是Wi。求解将哪些物品装入背包可使价值总和最大。</p>
+<p>简单分析下：这是最基础的背包问题，特点是每种物品仅有一件，可以选择放或不放。用子问题定义状态：即F[i, v]表示前i件物品恰放入一个容量为v的背包可以获得的最大价值。则其状态转移方程便是：</p>
+<ul>
+<li>F[i, v] = max{F[i-1, v], F[i-1, v-Ci ] + Wi}</li>
+</ul>
+<p>根据前面的分析，我们不难理解这个方程的意义：“将前i件物品放入容量为v的背包中”这个子问题，若只考虑第i件物品的策略（放或不放），那么就可以转化为一个只和前 i-1 件物品相关的问题。即：</p>
+<ul>
+<li>如果不放第i件物品，那么问题就转化为“前i-1件物品放入容量为v的背包中”，价值为 F[i-1, v ]；</li>
+<li>如果放第i件物品，那么问题就转化为“前i-1件物品放入剩下的容量为v-Ci的背包中”，此时能获得的最大价值就是F[i-1, v-Ci]再加上通过放入第i件物品获得的价值Wi。</li>
+</ul>
+<p>伪代码如下：</p>
+<pre><code class="language-c">F[0,0...V] ← 0
+for i ← 1 to N
+    for v ← Ci to V
+        F[i, v] ← max{F[i-1, v], F[i-1, v-Ci] + Wi }
+</code></pre>
+<p>这段代码的时间和空间复杂度均为 O(VN)，其中时间复杂度应该已经不能再优化了，但空间复杂度却可以优化到O(V)。感兴趣的读者可以继续思考或者参考网上一个不错的文档《背包问题九讲》。</p>
+<h2 id="举一反三"><a class="header" href="#举一反三">举一反三</a></h2>
+<p>1、《挑战程序设计竞赛》的开篇有个类似的抽签问题，挺有意思，题目如下：</p>
+<p>将写有数字的n个纸片放入一个纸箱子中，然后你和你的朋友从纸箱子中抽取4张纸片，每次记下纸片上的数字后放回子箱子中，如果这4个数字的和是m，代表你赢，否则就是你的朋友赢。</p>
+<p>请编写一个程序，当纸片上所写的数字是k1，k2，k3，k4，..，kn时，是否存在抽取4次和为m的方案，如果存在，输出YES；否则，输出NO。</p>
+<p>限制条件：</p>
+<ul>
+<li>1 &lt;= n &lt;= 50</li>
+<li>1 &lt;= m &lt;= 10^8</li>
+<li>1 &lt;= ki &lt;= 10^8</li>
+</ul>
+<p>分析：最容易想到的方案是用4个for循环直接穷举所有方案，时间复杂度为O（N^4）,主体代码如下：</p>
+<pre><code class="language-c">//通过4重for循环枚举所有方案
+for (int a = 0; a &lt; n, a++)
+{
+	for (int b = 0; b &lt; n; b++)
+	{
+		for (int c = 0; c &lt; n; c++)
+		{
+			for (int d = 0; d &lt; n; d++)
+			{
+				if (k[a] + k[b] + k[c] + k[d] == m)
+				{
+					f = true;
+				}
+			}
+		}
+	}
+}
+</code></pre>
+<p>但如果当n远大于50时，则程序会显得非常吃力，如此，我们需要找到更好的办法。</p>
+<p>提供两个思路：</p>
+<p>①最内侧关于d的循环所做的事情：检查是否有d满足ka+ kb +kc + kd = m，移动下式子，等价于：检查是否有d使得kd = m - ka - kb - kc，也就是说，只要检查k中所有元素，判断是否有等于m-ka-kb-ka 的元素即可。设m-ka-kb-ka = x，接下来，就是要看x是否存在于数组k中，此时，可以先把数组k排序，然后利用二分查找在数组k中找x；</p>
+<p>②进一步，内侧的两个循环所做的事情：检查是否有c和d满足kc + kd = m - ka -kb。同样，可以预先枚举出kc+kd所得的n^2数字并排好序，便可以利用二分搜索继续求解。</p>
+<p>2、给定整数a1、a2、a3、...、an，判断是否可以从中选出若干个数，使得它们的和等于k（k任意给定，且满足-10^8 &lt;= k &lt;= 10^8）。</p>
+<p>分析：此题相对于本节“寻找满足条件的多个数”如出一辙，不同的是此题只要求判断，不要求把所有可能的组合给输出来。因为此题需要考虑到加上a[i]和不加上a[i]的情况，故可以采用深度优先搜索的办法，递归解决。</p>
+<p>3、有n个数，输出期中所有和为s的k个数的组合。</p>
+<p>分析：此题有两个坑，一是这里的n个数是任意给定的，不一定是：1,2,3...n，所以可能有重复的数（如果有重复的数怎么处理？）；二是不要求你输出所有和为s的全部组合，而只要求输出和为s的k个数的组合。</p>
+<p>举个例子，假定n=6，这6个数为：1 2 1 3 0 1，如果要求输出和为3的全部组合的话，</p>
+<ul>
+<li>1 2</li>
+<li>1 2 0</li>
+<li>0 3</li>
+<li>1 1 1</li>
+<li>1 1 1 0</li>
+</ul>
+<p>而题目加了个限制条件，若令k=2，则只要求输出：[{1,2}, {0,3}] 即可。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="02.02.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="02.04.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="02.02.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="02.04.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>
